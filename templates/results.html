@@ -19,9 +19,12 @@
   <div class="table-users">
    <div class="header">Reviews</div>
 
-   <table cellspacing="0">              # created a table
-      <tr>                              # created a row, tr means means table row
-         <th>Product</th>               # heading of top row of table, th means table header
+      <!-- creating a table -->
+   <table cellspacing="0">
+       <!-- # created a row, tr means means table row -->
+       <!-- # heading of top row of table, th means table header -->
+      <tr>
+         <th>Product</th>
          <th>Name</th>
          <th>Rating</th>
          <th>Comment Heading</th>
@@ -29,8 +32,9 @@
       </tr>
          {% for review in reviews %}
 
+       <!-- # show casing this data on the result html page, td means data cell in table -->
       <tr>
-          <td>{{review['Product']}}</td>  # show casing this data on the result html page, td means data cell in table
+          <td>{{review['Product']}}</td>
          <td>{{review['Name']}}</td>
          <td>{{review['Rating']}}</td>
          <td>{{review['CommentHead']}}</td>
