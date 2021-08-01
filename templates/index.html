@@ -2,7 +2,7 @@
 
 {% block head %}
 
-<title>Search Page</title>
+<title>Web Scrapping Product Details from Flipkart</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock %}
 
@@ -10,8 +10,8 @@
 <div class="content">
     <h1 style="text-align: center">Search</h1>
 
-    <div class="form">
-        <form action="/review" method="POST">
+    <div class="form">                          # form is search dialogue box
+        <form action="/review" method="POST">   # calling review function from app.py, and data will not be <posted></posted>
             <input type="text" name="content" id="content">
             <input type="submit" value="Search">
         </form>

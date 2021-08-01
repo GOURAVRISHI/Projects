@@ -16,8 +16,9 @@ def homePage():
 def index():
     if request.method == 'POST':
         try:
+            # content is input, & searchString is input of user pulled from webpage
             searchString = request.form['content'].replace(" ","")
-            flipkart_url = "https://www.flipkart.com/search?q=" + searchString
+            flipkart_url = "https://www.flipkart.com/search?q=" + searchString  #
             uClient = uReq(flipkart_url)
             flipkartPage = uClient.read()
             uClient.close()
@@ -69,7 +70,8 @@ def index():
                 mydict = {"Product": searchString, "Name": name, "Rating": rating, "CommentHead": commentHead,
                           "Comment": custComment}
                 reviews.append(mydict)
-            return render_template('results.html', reviews=reviews[0:(len(reviews)-1)])
+            return render_template('results.html', reviews=reviews[0:(len(reviews)-1)])   # returning details on results.html
+
         except Exception as e:
             print('The Exception message is: ',e)
             return 'something is wrong'
